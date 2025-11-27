@@ -9,15 +9,15 @@ terraform {
 
 provider "aws" {
   # Configuration options
-    region = "us-east-1"
+    region = "ca-central-1"
 }
 
-# Create a S3 bucket
-resource "aws_s3_bucket" "tf_test_baivab_bucket" {
-  bucket = "my-tf-test-baiv-bucket"
+#Create S3 bucket
+resource "aws_s3_bucket" "tf_test_bucket" {
+ bucket = "techlearnswitch-alam-bucket"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "Aman bucket 2.0"
     Environment = "Dev"
   }
 }
