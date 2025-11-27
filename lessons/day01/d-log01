@@ -1,0 +1,15 @@
+#aalam - additional step, I have to do with video for Windows setup
+
+How to setup Terraform on Windows
+
+1. Download Windows exe file
+2. unzip and copy the file to any directory if wants to change
+3. Add to variable
+     - Open System properties
+    - Advanced
+    - Environment variables
+    - in System variables, Select  "path", Edit it, 
+        click New and Paste the path of directory contains "terraform.exe"
+    - VS code change from Powershell to git-bash
+ 
+- May need to change git-bash in VS code if needs to follow the commands
