@@ -1,0 +1,25 @@
+
+- add user permission to admin
+- following was error: 
+Error: creating EC2 Instance: operation error EC2: RunInstances, https response error StatusCode: 400, RequestID: 41a78d66-64a4-44d5-8ef5-0d45a9f1aebf, api error InvalidParameterCombination: The specified instance type is not eligible for Free Tier. For a list of Free Tier instance types, run 'describe-instance-types' with the filter 'free-tier-eligible=true'.
+
+solution:
+
+- Need to find t3.micro images under EC2 - > AMI
+- Select Free-tier eligible - > t3.micro
+
+
+ec2_id = "i-080777fa545d63b4a"
+vpc_id = "vpc-0772d566e08b4c05b"
+
+terraform output
+
+export TF_VAR_environment=stage
+
+https://developer.hashicorp.com/terraform/language/values/variables
+
+
+terraform.tfstate
+terraform.tfstate.json
+
+-var or -var-file option
