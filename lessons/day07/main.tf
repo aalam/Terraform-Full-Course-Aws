@@ -3,8 +3,12 @@
 # EC2 Instance - Demonstrating all type constraints
 resource "aws_instance" "web_server" {
   # String type: AMI ID and instance type
-  ami           = "ami-0e8459476fed2e23b"
+  #ami           = "ami-0e8459476fed2e23b"
+  ami           = "ami-04302d6f32dc7f75d"
   instance_type = var.instance_type
+  #instance_type = var.allowed_vm_types[0]  # Using first allowed instance type
+  region = tolist(var.availability_zones)[0]
+
   
   # Number type: Instance count
   count = var.instance_count

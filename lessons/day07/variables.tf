@@ -14,7 +14,7 @@ variable "region" {
 variable "instance_type" {
     type = string
     description = "the ec2 instance type"
-    default = "t2.micro"
+    default = "t3.micro"
 }
 
 # Number type
@@ -76,7 +76,7 @@ variable "instance_tags" {
 variable "availability_zones" {
     type = set(string)
     description = "set of availability zones (no duplicates)"
-    default = ["us-east-1a", "us-east-1b", "us-east-1c"]
+    default = [ "us-east-1", "us-east-1b", "us-east-1c"]
     # KEY DIFFERENCE FROM LIST:
     # - Automatically removes duplicates
     # - Order is not guaranteed
@@ -108,7 +108,7 @@ variable "server_config" {
     description = "Complete server configuration object"
     default = {
         name = "web-server"
-        instance_type = "t2.micro"
+        instance_type = "t3.micro"
         monitoring = true
         storage_gb = 20
         backup_enabled = false
@@ -119,4 +119,3 @@ variable "server_config" {
     # - Access: var.server_config.name, var.server_config.monitoring
     # - All attributes must be provided (unless optional)
 }
-

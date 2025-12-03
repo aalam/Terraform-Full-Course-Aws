@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.allowed_locations[0]
+  region = tolist(var.availability_zones)[0]
 
   default_tags {
     tags = {
